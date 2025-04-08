@@ -1,48 +1,34 @@
-# functions go here
 
-def yes_no(question):
-    """checks the user response to a question is yes / no (y/n), returns 'yes' or 'no' """
+# print error if user does not enter something that is valid
+print(error)
+print()
 
-
-    while True:
-
-        response = input(question).lower()
-
-        # check the user says yes / no
-
-        if response == "yes" or response == "y":
-            return "yes"
-
-        elif response == "no" or response == "n":
-            return "no"
-
-        else:
-            print("please enter yes / no")
-
-
+# displays instructions
 def instructions():
-    """Prints instructions"""
+        print("""
+            *** instructions ****
+            to begin, choose the number of rounds (or press <enter> for
+            infinite mode).
+            then play against the computer. you need to choose R (rock)
+            p (paper) s (scissors).
+            the rules are as follow:
+            o paper beats rock
+            o rock beats scissors
+            o scissors beats paper
+            press <xxx> to end the game at anytime
+            Good luck
+        """)
 
-
-    print("""
-    **** Instructions ****
-    Choose from rock / paper / scissors and hope to win.
-    - rock beats scissors
-    - scissors beats paper
-    - paper beats rock
-    Good luck.
-    """)
-
-# Main routine
-
+# main routine
+print()
+print("💎📄✂️ rock / paper / scissors game 💎📄✂️")
+print()
 
 # ask the user if they want instructions (check they say yes / no)
-want_instructions = yes_no("Do you want to see the instructions? ")
+want_instructions = string_checker("do you want to see the instructions")
 
-# display the instruction if user wants to see them...
-
+# display the instructions if the user wants to see them...
 if want_instructions == "yes":
-
-    instructions()
-    print()
-
+        instructions()
+        print()
+        print("program continues")

@@ -29,7 +29,7 @@ to_test = [
     ("Maybe", "invalid"),
 ]
 
-# run tests!
+# run tests!S
 for item in to_test:
     # retrieve test case and expected value
     case = item[0]
